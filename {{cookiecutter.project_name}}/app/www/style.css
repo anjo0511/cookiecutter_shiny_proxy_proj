@@ -1,0 +1,226 @@
+@font-face {
+  font-family: plantin;
+  src: url('font/PlantinStd-BoldCondensed.otf') format('opentype');
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url('font/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: SourceSansProSBd;
+  src: url('font/SourceSansPro-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: SourceSansProBd;
+  src: url('font/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+
+body {margin:50px; font-size:13pt; font-family: "SourceSansPro", sans-serif; color: #333333; background-color:white;}
+
+.navbar {background: #f8f8f8 url('img/ipsoslogo.png') no-repeat top 3px right 5px; background-size: 43px 43px; }
+
+h1 {
+  color: #333333;
+  font-size:26pt;
+  font-family: "plantin", Serif;
+  font-weight:400;
+}
+
+.plottitle {
+  font-family: "SourceSansProSBd", sans-serif;
+  font-size:16pt;
+}
+
+h2 {
+  color: #333333;
+  font-size: 16pt;
+  font-family: "SourceSansProSBd", sans-serif;
+}
+
+h3 {
+  font-family: "SourceSansProSBd", sans-serif;
+  font-size: 13pt;
+}
+
+.txtbox {
+  padding: 0 15px 15px 15px;
+}
+
+.hilitebox {
+  background-color: #f7f7e8;
+  border: 1px solid #e4e4cd;
+  border-bottom: 2px solid #bcb885;
+  border-radius: 0;
+  padding: 0 15px 15px 15px;
+  color: #333333;
+  font-size:13pt;
+}
+
+.hilitesection {
+  border-left:4px solid #1a9e9f;
+  padding-left:12px;
+}
+
+
+
+/* inset scorecard and table style */
+
+
+.plotbox {
+  padding: 0 20px 20px 20px;
+  border: 1px solid #e4e4cd;
+  box-shadow: 5px 5px #f2f2f2;
+}
+
+.greybox {
+  background-color: #f8f8f8;
+  border-bottom:6px solid #555555;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  padding: 10px;
+}
+
+
+/* Don't use this */
+.ipsoscopyrightbox {
+  background: white url('verticalstripes.png') no-repeat;
+  padding-left: 35px;
+  font-size:10pt;
+  color:#606060;
+}
+
+/* hyperlinks */
+a {color:#333333;}
+
+/* tabPanels pill type */
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+   background-color: white;
+   color: #333;
+   border-radius:0;
+   border-bottom: 2px solid #1a9e9f; margin-right:5px;
+}
+
+.nav-pills>li>a {
+   background-color: white;
+   color: #777;
+   border-radius:0;
+   border-bottom: 2px solid white; margin-right:5px;
+}
+.nav-pills>li>a:hover {
+   background-color: white;
+   color: #333;
+   border-radius:0;
+   border-bottom: 2px solid #d9f3f3; margin-right:5px;
+}
+
+
+/* reactables */
+.rtbl {font-size:13pt !important; border: 3px solid white;}
+
+.rtbl-header {
+  padding: 8px !important;
+  border:2px solid white;
+  color: #333;
+  font-weight: 600;
+  font-size: 13pt;
+}
+
+.rtbl-header:hover,
+.rtbl-header[aria-sort="ascending"],
+.rtbl-header[aria-sort="descending"] {
+  background-color: white; color:#333;
+}
+
+.rtbl-header[aria-sort="ascending"] {
+  box-shadow: inset 0 -10px 0 -8px #bcb885 !important;
+}
+
+.rtbl-header[aria-sort="descending"] {
+  box-shadow: inset 0 10px 0 -8px #bcb885 !important;
+}
+
+/* inset reactables, highlights in case of row-expansion */
+.insetbox {
+  margin-top:15px;
+  margin-bottom:15px;
+  background-color: #eef8f8;
+  border-left:4px solid #1a9e9f;
+  padding: 2px 15px 15px 12px;
+}
+
+.insettbl {background-color: #eef8f8; font-size:12pt !important; border: 2px solid #eef8f8;}
+
+.insettbl-header {
+  padding: 8px !important;
+  border:2px solid #eef8f8;
+  color: #333;
+  font-weight: 600;
+  font-size: 12pt;
+}
+
+.insettbl-header:hover,
+.insettbl-header[aria-sort="ascending"],
+.insettbl-header[aria-sort="descending"] {
+  background-color: eef8f8; color:#333;
+}
+
+.insettbl-header[aria-sort="ascending"] {
+  box-shadow: inset 0 -10px 0 -8px #1a9e9f !important;
+}
+
+.insettbl-header[aria-sort="descending"] {
+  box-shadow: inset 0 10px 0 -8px #1a9e9f !important;
+}
+
+
+
+
+/* button styling, nice to use with radioGroupButtons, use (status = "dmg") */
+.btn-dmg {
+  height:45px;
+  padding-top:10px;
+  font-size: 13pt;
+  background:white;
+  box-shadow:none;
+  color:#777;
+  border-bottom: 2px solid white;
+  border-radius:0;
+}
+
+.btn-dmg:hover {
+  background:white;
+  border-bottom: 2px solid #e4e4cd;
+  color:#333;
+  box-shadow:none;
+  border-radius:0;
+}
+
+.btn-dmg.active {
+  background-color: white;
+  border-bottom: 2px solid #bcb885;
+  color:#333;
+  box-shadow:none;
+  border-radius:0;
+}
+
+
+/* sliders */
+.irs-bar {
+border-top-color: #303030;
+border-bottom-color: #303030;
+background: #555555;
+}
+
+.irs-from, .irs-to  {background-color: #555555; color: white; border: 1px solid #303030;}
+
+.irs-grid-text {color:white;}
+.irs-grid-pol {background: #555555;}
+
+
