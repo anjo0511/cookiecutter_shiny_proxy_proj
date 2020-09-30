@@ -46,6 +46,12 @@ h3 {
   font-size: 13pt;
 }
 
+/* shiny widget headers */
+.control-label {
+  font-family: "SourceSansProSBd", sans-serif; 
+  font-weight: normal;
+}
+
 .txtbox {
   padding: 0 15px 15px 15px;
 }
