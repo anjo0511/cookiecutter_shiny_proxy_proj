@@ -1,7 +1,10 @@
-@font-face {
-  font-family: plantin;
-  src: url('font/PlantinStd-BoldCondensed.otf') format('opentype');
-}
+/*
+{bodytext}
+{primarycolor}
+{secondarycolor_light}
+{secondarycolor_dark}
+{greycolor}
+*/
 
 @font-face {
   font-family: SourceSansPro;
@@ -19,15 +22,14 @@
 }
 
 
-body {margin:50px; font-size:13pt; font-family: "SourceSansPro", sans-serif; color: #333333; background-color:white;}
+body {margin:50px; font-size:13pt; font-family: "SourceSansPro", sans-serif; color: #{bodytext}; background-color:white;}
 
 .navbar {background: #f8f8f8 url('img/ipsoslogo.png') no-repeat top 3px right 5px; background-size: 43px 43px; }
 
 h1 {
-  color: #333333;
+  color: #{bodytext};
+  font-family: "SourceSansProSBd", Serif;
   font-size:26pt;
-  font-family: "plantin", Serif;
-  font-weight:400;
 }
 
 .plottitle {
@@ -36,7 +38,6 @@ h1 {
 }
 
 h2 {
-  color: #333333;
   font-size: 16pt;
   font-family: "SourceSansProSBd", sans-serif;
 }
@@ -48,7 +49,7 @@ h3 {
 
 /* shiny widget headers */
 .control-label {
-  font-family: "SourceSansProSBd", sans-serif; 
+  font-family: "SourceSansProSBd", sans-serif;
   font-weight: normal;
 }
 
@@ -57,17 +58,17 @@ h3 {
 }
 
 .hilitebox {
-  background-color: #f7f7e8;
-  border: 1px solid #e4e4cd;
-  border-bottom: 2px solid #bcb885;
+  background-color: #{secondarycolor_light};
+  border: 1px solid #{secondarycolor_light};
+  border-bottom: 2px solid #{secondarycolor_dark};
   border-radius: 0;
   padding: 0 15px 15px 15px;
-  color: #333333;
+  color: #{bodytext};
   font-size:13pt;
 }
 
 .hilitesection {
-  border-left:4px solid #1a9e9f;
+  border-left:4px solid #00a0d6;
   padding-left:12px;
 }
 
@@ -78,7 +79,7 @@ h3 {
 
 .plotbox {
   padding: 0 20px 20px 20px;
-  border: 1px solid #e4e4cd;
+  border: 1px solid #{secondarycolor_light};
   box-shadow: 5px 5px #f2f2f2;
 }
 
@@ -101,29 +102,29 @@ h3 {
 }
 
 /* hyperlinks */
-a {color:#333333;}
+a {color:#{bodytext};}
 
 /* tabPanels pill type */
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:focus,
 .nav-pills>li.active>a:hover {
    background-color: white;
-   color: #333;
+   color: #{bodytext};
    border-radius:0;
-   border-bottom: 2px solid #1a9e9f; margin-right:5px;
+   border-bottom: 2px solid #{secondarycolor_dark}; margin-right:5px;
 }
 
 .nav-pills>li>a {
    background-color: white;
-   color: #777;
+   color: #{bodytext};
    border-radius:0;
    border-bottom: 2px solid white; margin-right:5px;
 }
 .nav-pills>li>a:hover {
    background-color: white;
-   color: #333;
+   color: #{bodytext};
    border-radius:0;
-   border-bottom: 2px solid #d9f3f3; margin-right:5px;
+   border-bottom: 2px solid #{primarycolor}; margin-right:5px;
 }
 
 
@@ -132,60 +133,61 @@ a {color:#333333;}
 
 .rtbl-header {
   padding: 8px !important;
+  background-color: white;
   border:2px solid white;
-  color: #333;
-  font-weight: 600;
-  font-size: 13pt;
+  color: #{bodytext};
+  font-family: "SourceSansProSBd";
+  font-weight: 400 !important;
+  font-size: 12pt;
 }
 
 .rtbl-header:hover,
 .rtbl-header[aria-sort="ascending"],
 .rtbl-header[aria-sort="descending"] {
-  background-color: white; color:#333;
+  background-color: white; color:#{bodytext};
 }
 
 .rtbl-header[aria-sort="ascending"] {
-  box-shadow: inset 0 -10px 0 -8px #bcb885 !important;
+  box-shadow: inset 0 -10px 0 -8px #{primarycolor} !important;
 }
 
 .rtbl-header[aria-sort="descending"] {
-  box-shadow: inset 0 10px 0 -8px #bcb885 !important;
+  box-shadow: inset 0 10px 0 -8px #{primarycolor} !important;
 }
 
 /* inset reactables, highlights in case of row-expansion */
 .insetbox {
   margin-top:15px;
   margin-bottom:15px;
-  background-color: #eef8f8;
-  border-left:4px solid #1a9e9f;
+  background-color: #b4dff3;
+  border-left:4px solid #{primarycolor};
   padding: 2px 15px 15px 12px;
 }
 
-.insettbl {background-color: #eef8f8; font-size:12pt !important; border: 2px solid #eef8f8;}
+.insettbl {background-color: #{secondarycolor_light}; font-size:12pt !important; border: 2px solid #{secondarycolor_light};}
 
 .insettbl-header {
   padding: 8px !important;
-  border:2px solid #eef8f8;
-  color: #333;
-  font-weight: 600;
+  border:2px solid #{secondarycolor_light};
+  color: #{bodytext};
+  font-family: "SourceSansProSBd";
+  font-weight: 400 !important;
   font-size: 12pt;
 }
 
 .insettbl-header:hover,
 .insettbl-header[aria-sort="ascending"],
 .insettbl-header[aria-sort="descending"] {
-  background-color: eef8f8; color:#333;
+  background-color: {secondarycolor_light}; color:#{bodytext};
 }
 
 .insettbl-header[aria-sort="ascending"] {
-  box-shadow: inset 0 -10px 0 -8px #1a9e9f !important;
+  box-shadow: inset 0 -10px 0 -8px #{secondarycolor_dark} !important;
 }
 
 .insettbl-header[aria-sort="descending"] {
-  box-shadow: inset 0 10px 0 -8px #1a9e9f !important;
+  box-shadow: inset 0 10px 0 -8px #{secondarycolor_dark} !important;
 }
-
-
 
 
 /* button styling, nice to use with radioGroupButtons, use (status = "dmg") */
@@ -202,16 +204,16 @@ a {color:#333333;}
 
 .btn-dmg:hover {
   background:white;
-  border-bottom: 2px solid #e4e4cd;
-  color:#333;
+  border-bottom: 2px solid #{primarycolor};
+  color:#{bodytext};
   box-shadow:none;
   border-radius:0;
 }
 
 .btn-dmg.active {
   background-color: white;
-  border-bottom: 2px solid #bcb885;
-  color:#333;
+  border-bottom: 2px solid #{secondarycolor_dark};
+  color:#{bodytext};
   box-shadow:none;
   border-radius:0;
 }
